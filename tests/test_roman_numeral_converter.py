@@ -1,5 +1,5 @@
 import pytest
-from roman_numeral_converter import *
+from application.roman_numeral_converter import to_arabic_number, to_roman_numeral
 
 # print(to_roman_numeral(10))
 
