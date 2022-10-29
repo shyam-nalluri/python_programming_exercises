@@ -1,8 +1,7 @@
 # Application to convert Roman Numbers 
----
 # Folder structure
 * The **root** folder contains basic hello world program and other folders which contain application and test cases.
-* **roman_numeral_converter** folder contains code to convert the roman numbers to arabic and Arabic numbers to roman 
+* **application** folder contains code to convert the roman numbers to arabic and Arabic numbers to roman 
 * **tests** folder contains the test cases for the application
 
 # Instructions to run hello world.py
