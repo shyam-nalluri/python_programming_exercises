@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div>
+
+            <h2>Roman Numerals Converter</h2>
+            <div id="resultdiv">
+                <h3><b>Result</b></h3>
+                <p>Number <span class="result"> <b> {{ number_string }}</b> </span>equals to <span class="result"><b>{{
+                            number_arabic }}</b></span> in Arabic Numerals</p>
+            </div>
+            <form action="/" method="GET">
+                <button id="home">Home</button>
+        </div>
+    </body>
+
+</html>

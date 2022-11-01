@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+scratchpad
 __pycache__/
 flaskr
 *.py[cod]
