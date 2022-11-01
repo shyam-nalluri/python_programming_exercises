@@ -67,6 +67,7 @@ if __name__ == "__main__":
     --roman
     --numeral\n"""
     )
+
     try:
         if OPTION == "--roman":
             result = to_roman_numeral(
