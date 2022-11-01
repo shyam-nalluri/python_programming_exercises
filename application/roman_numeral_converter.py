@@ -1,5 +1,11 @@
 """This program converts Roman to Arabic numbers and Arabic to Roman numbers between 1 and 3999"""
 
+OPTION = input(
+    """Choose option below
+--roman
+--numeral\n"""
+)
+
 ARABIC_NUMBERS = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
 ROMAN_NUMBERS = [
     "I",
@@ -53,3 +59,16 @@ def to_arabic_number(roman_numeral: str) -> int:
             ROMAN_NUMERAL += ROMAN_ARABIC_NUMERALS[numeral]
         last = numeral
     return ROMAN_NUMERAL
+
+
+try:
+    if OPTION == "--roman":
+        execute = to_roman_numeral(
+            int(input("""Enter Arabic number between 1 and 3999: """))
+        )
+        print(execute)
+    elif OPTION == "--numeral":
+        execute = to_arabic_number(input("""Enter Roman number: """).upper())
+        print(execute)
+except Exception as error:
+    print(error)
