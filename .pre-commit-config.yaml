@@ -9,27 +9,30 @@ repos:
         description: This hook trims trailing whitespace.
         entry: trailing-whitespace-fixer
         language: python
-        types: [text]
-
-  - repo: https://github.com/psf/black
-    rev: 22.10.0
-    hooks:
-      - id: black
+        types: [python]
+        stages: [commit]
 
   - repo: local
     hooks:
       - id: tests
         name: run tests
-        entry: pytest -v
+        entry: pytest
         language: python
-        types: [text]
+        pass_filenames: False
+        types: [python]
         stages: [commit]
 
-  - repo: local
+  - repo: https://github.com/psf/black
+    rev: 22.10.0
     hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: python
-        types: [text]
-        args: ["-rn"]
+      - id: black
+        stages: [commit]
+
+  # - repo: local
+  #   hooks:
+  #     - id: pylint
+  #       name: pylint
+  #       entry: pylint
+  #       language: system
+  #       types: [python]
+  #       stages: [commit]

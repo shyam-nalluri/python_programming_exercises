@@ -19,3 +19,11 @@ def test_to_arabic_numeral():
     assert to_arabic_number("IV") == 4
     assert to_arabic_number("XC") == 90
     assert to_arabic_number("MMMCMXCIX") == 3999
+
+
+def test_to_arabic_number_zero():
+    assert to_arabic_number("nulla") == 0
+
+
+def test_to_roma_numeral_zero():
+    assert to_roman_numeral(0) == "nulla"
