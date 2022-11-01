@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+  </head>
+
+  <body>
+
+    <h2>Roman Numerals Converter</h2>
+    <!-- <p>This application converts Arabic to Roman and Roman to Arabic numerals. Only numbers from 1 to 3999 are allowed.
+    </p><br> -->
+
+    <form action="/roman" method="post">
+      <label for="number"><b>Please Enter Arabic Number</b></label>
+      <input placeholder="Enter Numbers Between 1 and 3999" name="number" id="number" required />
+      <button id="button">Convert to Roman</button>
+      {% if not_valid %}
+      <p class="warning"><b>Not Valid! Please enter a number between 1 and 3999</b></p>
+      {% endif %}
+    </form>
+
+    <form action="/arabic" method="post">
+      <label for="number"><b>Please Enter Roman Number</b></label>
+      <input placeholder="Enter Only Roman Numbers" name="number" id="number" required />
+      <button id="button">Convert to Arabic</button>
+      {% if not_valid_roman %}
+      <p class="warning"><b>Not Valid! Please enter a Roman number</b></p>
+      {% endif %}
+    </form>
+
+
+  </body>
+
+</html>
