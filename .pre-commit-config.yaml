@@ -28,6 +28,12 @@ repos:
       - id: black
         stages: [commit]
 
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a3
+    hooks:
+      - id: pylint
+        args: [--disable=all, --enable=unused-import]
+
   # - repo: local
   #   hooks:
   #     - id: pylint
