@@ -1,6 +1,4 @@
 """This program converts Roman to Arabic numbers and Arabic to Roman numbers between 1 and 3999"""
-
-
 ARABIC_NUMBERS = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
 ROMAN_NUMBERS = [
     "I",
@@ -68,6 +66,8 @@ if __name__ == "__main__":
     --numeral\n"""
     )
 
+
+def try_except():
     try:
         if OPTION == "--roman":
             result = to_roman_numeral(
